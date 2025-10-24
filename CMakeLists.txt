@@ -8,3 +8,6 @@ include_directories(src)
 add_executable(casino_game src/main.cpp src/game.cpp src/player.cpp)
 
 add_executable(test_game tests/test_game.cpp src/game.cpp src/player.cpp)
+
+target_link_options(casino_game PRIVATE -static-libstdc++ -static-libgcc)
+
